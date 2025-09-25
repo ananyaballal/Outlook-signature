@@ -39,14 +39,42 @@
             height: 90px; /* Divider height */
             margin-bottom: 10px;
         }
+        /* Reduce vertical spacing between contact rows */
+        .contact-container tr {
+            margin: 0;
+            padding: 0;
+        }
+        .contact-container td {
+            padding-bottom: 2px; /* Reduced from default spacing */
+        }
         @media only screen and (max-width: 480px) {
             .logo img {
                 width: 200px !important;
                 height: 100px !important;
+                display: block;
+                margin: 0 auto;
             }
             .address {
-                padding-left: 15px;
+                padding-left: 5px; /* Reduced padding-left for address */
                 width: 190px;
+                text-align: left; /* Ensure left alignment */
+            }
+            .address-container {
+                padding-right: 0px;
+                display: block;
+                text-align: left; /* Ensure left alignment */
+            }
+            .contact-container {
+                padding-left: 0;
+                display: block;
+                text-align: left; /* Ensure left alignment */
+            }
+            .contact-container img {
+                margin-right: 5px;
+                vertical-align: middle;
+            }
+            .contact-container a {
+                vertical-align: middle;
             }
         }
     </style>
@@ -71,11 +99,11 @@
             <td>
                 <table cellpadding="0" cellspacing="0" border="0">
                     <tr>
-                        <td width="220" valign="top" style="padding-right: 20px;">
+                        <td width="220" valign="top" style="padding-right: 20px;" class="logo">
                             <img src="images/ESTTAREAL LOGO.png" alt="Esttareal Logo" width="200" height="100" style="display: block; margin-top: 30px;" />
                         </td>
                         <td width="1" style="vertical-align: bottom;"><div class="divider"></div></td>
-                        <td width="200" valign="top" style="padding-left: 30px; padding-top: 60px;">
+                        <td width="200" valign="top" style="padding-left: 30px; padding-top: 60px;" class="address-container">
                             <div class="address">
                                 <span class="address-line">5D/431, HRBR II</span>
                                 <span class="address-line">block, Kalyan Nagar,</span>
@@ -84,17 +112,15 @@
                         </td>
                         <td width="1" style="vertical-align: bottom;"><div class="divider"></div></td>
                         <td width="200" valign="top" style="padding-left: 25px; padding-top: 50px;">
-                            <table cellpadding="0" cellspacing="0" border="0">
+                            <table cellpadding="0" cellspacing="0" border="0" class="contact-container">
                                 <tr>
                                     <td><img src="images/Mail icon.png" alt="Email" width="60" height="30" style="vertical-align: middle; margin-right: 5px;" /></td>
                                     <td><a href="mailto:sobha@esttareal.com" style="color: #d2691e; text-decoration: none;">sobha@esttareal.com</a></td>
                                 </tr>
-                                <tr><td height="5"></td></tr>
                                 <tr>
                                     <td><img src="images/website icon.png" alt="Website" width="60" height="30" style="vertical-align: middle; margin-right: 5px;" /></td>
                                     <td><a href="https://esttareal.com" style="color: #d2691e; text-decoration: none;">esttareal.com</a></td>
                                 </tr>
-                                <tr><td height="5"></td></tr>
                                 <tr>
                                     <td><img src="images/phone icon.png" alt="Phone" width="60" height="30" style="vertical-align: middle; margin-right: 5px;" /></td>
                                     <td><a href="tel:+919845545561" style="color: #d2691e; text-decoration: none;">+91 9845545561</a></td>
