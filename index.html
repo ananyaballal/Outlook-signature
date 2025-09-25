@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Signature</title>
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .name {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333333;
+            margin-right: 10px;
+        }
+        .frics {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333333;
+        }
+        .title {
+            font-size: 18px;
+            color: #d2691e;
+            margin-top: 10px;
+        }
+        .address, .contact a {
+            font-size: 18px;
+            color: #d2691e; 
+            text-decoration: none;
+        }
+        .address-line {
+            display: block;
+            padding-bottom: 8px;
+        }
+        .divider {
+            border-left: 1px solid #b8956a;
+            height: 90px; /* Divider height */
+            margin-bottom: 10px;
+        }
+        @media only screen and (max-width: 480px) {
+            .logo img {
+                width: 200px !important;
+                height: 100px !important;
+            }
+            .address {
+                padding-left: 15px;
+                width: 190px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" style="font-family: Arial, sans-serif;">
+        <!-- Header Section -->
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td><span class="name">Dr. Sobha Rani</span></td>
+                        <td><span class="frics">FRICS</span></td>
+                    </tr>
+                    <tr><td colspan="2" style="padding-top: 10px;"><span class="title">Founder & Managing Director</span></td></tr>
+                </table>
+            </td>
+        </tr>
+        <tr><td height="40px"></td></tr> <!-- Spacer -->
+        <!-- Logo, Address, and Contact Section -->
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td width="220" valign="top" style="padding-right: 20px;">
+                            <img src="images/ESTTAREAL LOGO.png" alt="Esttareal Logo" width="200" height="100" style="display: block; margin-top: 30px;" />
+                        </td>
+                        <td width="1" style="vertical-align: bottom;"><div class="divider"></div></td>
+                        <td width="200" valign="top" style="padding-left: 30px; padding-top: 60px;">
+                            <div class="address">
+                                <span class="address-line">5D/431, HRBR II</span>
+                                <span class="address-line">block, Kalyan Nagar,</span>
+                                <span class="address-line">Bangalore-560043</span>
+                            </div>
+                        </td>
+                        <td width="1" style="vertical-align: bottom;"><div class="divider"></div></td>
+                        <td width="200" valign="top" style="padding-left: 25px; padding-top: 50px;">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td><img src="images/Mail icon.png" alt="Email" width="60" height="30" style="vertical-align: middle; margin-right: 5px;" /></td>
+                                    <td><a href="mailto:sobha@esttareal.com" style="color: #d2691e; text-decoration: none;">sobha@esttareal.com</a></td>
+                                </tr>
+                                <tr><td height="5"></td></tr>
+                                <tr>
+                                    <td><img src="images/website icon.png" alt="Website" width="60" height="30" style="vertical-align: middle; margin-right: 5px;" /></td>
+                                    <td><a href="https://esttareal.com" style="color: #d2691e; text-decoration: none;">esttareal.com</a></td>
+                                </tr>
+                                <tr><td height="5"></td></tr>
+                                <tr>
+                                    <td><img src="images/phone icon.png" alt="Phone" width="60" height="30" style="vertical-align: middle; margin-right: 5px;" /></td>
+                                    <td><a href="tel:+919845545561" style="color: #d2691e; text-decoration: none;">+91 9845545561</a></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
