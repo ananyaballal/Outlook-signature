@@ -9,7 +9,6 @@
             padding: 20px;
             font-family: Arial, sans-serif;
             overflow-x: hidden;
-          
         }
         .name {
             font-size: 32px;
@@ -38,52 +37,57 @@
         }
         .divider {
             border-left: 1px solid #b8956a;
-            height: 90px; /* Divider height */
+            height: 90px;
             margin-bottom: 10px;
         }
-        /* Reduce vertical spacing between contact rows */
         .contact-container tr {
             margin: 0;
             padding: 0;
         }
         .contact-container td {
-            padding-bottom: 2px; /* Reduced from default spacing */
+            padding-bottom: 1px; /* Reduced spacing between contact rows */
         }
-        @media only screen and (max-width: 480px) {
-            
+        /* Mobile-specific styles */
+        @media only screen and (max-width: 600px) {
             .logo img {
-                width: 200px !important;
-                height: 100px !important;
-                display: block;
-                margin: 0 auto;
-            } 
+                width: 100px !important;
+                height: 75px !important;
+            }
+            .address-container, .contact-container {
+                width: 100% !important;
+                padding-left: 0 !important;
+                padding-top: 10px !important;
+            }
             .address {
-                padding-left: 5px; /* Reduced padding-left for address */
-                width: 190px;
-                text-align: left; /* Ensure left alignment */
+                font-size: 16px !important;
             }
-            .address-container {
-                padding-right: 0px;
-                display: block;
-                text-align: left; /* Ensure left alignment */
+            .contact a {
+                font-size: 16px !important;
             }
-            .contact-container {
-                padding-left: 0;
-                display: block;
-                text-align: left; /* Ensure left alignment */
+            .divider {
+                display: none !important; /* Hide dividers on mobile */
             }
             .contact-container img {
-                margin-right: 5px;
-                vertical-align: middle;
+                width: 40px !important;
+                height: 20px !important;
             }
-            .contact-container a {
-                vertical-align: middle;
+            /* Ensure contact container image and text stay on the same line */
+            .contact-container tr {
+                display: table-row !important; /* Keep table row structure */
             }
-            .address, .contact a {
-            font-size: 12px;
-            color: #d2691e; 
-            text-decoration: none;
-        }
+            .contact-container td {
+                display: table-cell !important; /* Keep cells inline */
+                vertical-align: middle !important;
+                padding-right: 5px !important;
+                padding-bottom: 5px !important; /* Adjusted for spacing */
+            }
+            /* Stack other table cells vertically, excluding contact-container */
+            table:not(.contact-container) tr td {
+                display: block !important;
+                width: 100% !important;
+                padding-right: 0 !important;
+                padding-bottom: 10px !important;
+            }
         }
     </style>
 </head>
@@ -107,19 +111,19 @@
             <td>
                 <table cellpadding="0" cellspacing="0" border="0">
                     <tr>
-                        <td width="220" valign="top" style="padding-right: 20px;" class="logo">
+                        <td class="logo" style="padding-right: 10px; vertical-align: top;"> <!-- Reduced padding-right from 20px to 10px -->
                             <img src="images/ESTTAREAL LOGO.png" alt="Esttareal Logo" width="200" height="100" style="display: block; margin-top: 30px;" />
                         </td>
-                        <td width="1" style="vertical-align: bottom;"><div class="divider"></div></td>
-                        <td width="200" valign="top" style="padding-left: 30px; padding-top: 60px;" class="address-container">
+                        <td style="vertical-align: bottom;"><div class="divider"></div></td>
+                        <td class="address-container" style="padding-left: 30px; padding-top: 60px; vertical-align: top;">
                             <div class="address">
                                 <span class="address-line">5D/431, HRBR II</span>
                                 <span class="address-line">block, Kalyan Nagar,</span>
                                 <span class="address-line">Bangalore-560043</span>
                             </div>
                         </td>
-                        <td width="1" style="vertical-align: bottom;"><div class="divider"></div></td>
-                        <td width="200" valign="top" style="padding-left: 25px; padding-top: 50px;">
+                        <td style="vertical-align: bottom;"><div class="divider"></div></td>
+                        <td style="padding-left: 15px; padding-top: 50px; vertical-align: top;"> <!-- Reduced padding-left from 25px to 15px -->
                             <table cellpadding="0" cellspacing="0" border="0" class="contact-container">
                                 <tr>
                                     <td><img src="images/Mail icon.png" alt="Email" width="60" height="30" style="vertical-align: middle; margin-right: 5px;" /></td>
